@@ -9,7 +9,7 @@
 
 ## Installation
 
-1. Clone the repository, Navigate into the directory and build
+Clone the repository, Navigate into the directory and build
    ```bash
    git clone https://github.com/DarkAxi0m/TriggerShell.git
    cd TriggerShell
@@ -30,8 +30,10 @@ Run TriggerShell by specifying the target directory to monitor and the directory
 * `script-directory`: The directory containing shell scripts, which should be named with the file extension they will trigger (e.g., example.sh will trigger when a .example file is created).
 
 ## Examples
-
-`./TriggerShell ~/Downloads ./scripts`
+   
+   ```bash
+   ./TriggerShell ~/Downloads ./scripts`
+   ```
 
 For example, in a scenario where you are watching your download folder, you could use the following scripts (found in the example folder of the repo):
 
