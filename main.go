@@ -90,7 +90,7 @@ func monitorDirectory(targetDir string) error {
 					// When a new file is created, check if the suffix matches any of the scripts
 					fileExtension := filepath.Ext(event.Name)
 					mutex.Lock()
-					scriptPath, exists := suffixToScriptMap[fileExtension]
+					scriptPath, exists := suffixToScriptMap[strings.ToLower(fileExtension)]
 					mutex.Unlock()
 
 					if exists {
