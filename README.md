@@ -13,7 +13,7 @@
    ```bash
    git clone https://github.com/DarkAxi0m/TriggerShell.git
    cd TriggerShell
-   go build
+   go build -o TriggerShell
    ```
 
 
