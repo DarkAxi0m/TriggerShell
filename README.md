@@ -18,7 +18,7 @@ Short Installation: Clone the repository, Navigate into the directory and build
    sudo make install
    ```
 
-Setup a new tigger
+Setup a new trigger
    ```bash
    cd TriggerShell
    make setup
