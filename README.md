@@ -47,7 +47,7 @@ Run TriggerShell by specifying the target directory to monitor and the directory
 ## Examples
    
    ```bash
-   ./TriggerShell ~/Downloads ./scripts`
+   ./TriggerShell ~/Downloads ./scripts
    ```
 
 For example, in a scenario where you are watching your download folder, you could use the following scripts (found in the example folder of the repo):
@@ -60,6 +60,8 @@ In no order
 
 * Watch the scripts folder for changes
 * Stop the duplicate triggering with Chrome downloads
+* Create Releases
+* Create Deb install
 
 
 ## Contributing
