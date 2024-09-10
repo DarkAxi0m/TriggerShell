@@ -10,18 +10,25 @@
 ## Installation
 
 Clone the repository, Navigate into the directory and build
-   ```bash
-   git clone https://github.com/DarkAxi0m/TriggerShell.git
-   cd TriggerShell
-   go build -o TriggerShell
-   ```
 
-or
    ```bash
    git clone https://github.com/DarkAxi0m/TriggerShell.git
    cd TriggerShell
    make
    sudo make install
+   ```
+
+Setup a new tigger
+   ```bash
+   cd TriggerShell
+   make setup
+   
+   Enter folder to watch (default: ~/Downloads): 
+   Enter folder for scripts (default: ./scripts): 
+   TriggerShell.desktop file created and permissions set in /home/chris/.config/autostart with watch_dir=/home/chris/Downloads and scripts_dir=./scripts
+   Do you want to start TriggerShell now? (y/n): n
+   TriggerShell setup complete. You can start it manually later.
+
    ```
 
 
