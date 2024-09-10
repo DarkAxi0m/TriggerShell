@@ -16,6 +16,14 @@ Clone the repository, Navigate into the directory and build
    go build -o TriggerShell
    ```
 
+or
+   ```bash
+   git clone https://github.com/DarkAxi0m/TriggerShell.git
+   cd TriggerShell
+   make
+   sudo make install
+   ```
+
 
 ## Usage
 Run TriggerShell by specifying the target directory to monitor and the directory containing shell scripts:
@@ -40,6 +48,11 @@ For example, in a scenario where you are watching your download folder, you coul
 - `appimage.sh`: Asks for confirmation before proceeding, then copies the file to `~/Applications`, sets the correct permissions, and creates a `.desktop` file.
 - `torrent.sh`: When a `.torrent` file is downloaded, it uploads the file to a remote FTP server and then deletes it.
 
+## Current bugs and to-dos
+In no order
+
+* Watch the scripts folder for changes
+* Stop the duplicate triggering with Chrome downloads
 
 
 ## Contributing
