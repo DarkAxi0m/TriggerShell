@@ -59,7 +59,7 @@ For example, in a scenario where you are watching your download folder, you coul
 In no order
 
 * Watch the scripts folder for changes
-* Stop the duplicate triggering with Chrome downloads
+* ~~Stop the duplicate triggering with Chrome downloads~~
 
 
 ## Contributing
