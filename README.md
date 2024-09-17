@@ -9,7 +9,7 @@
 
 ## Installation
 
-Clone the repository, Navigate into the directory and build
+Short Installation: Clone the repository, Navigate into the directory and build
 
    ```bash
    git clone https://github.com/DarkAxi0m/TriggerShell.git
@@ -18,16 +18,41 @@ Clone the repository, Navigate into the directory and build
    sudo make install
    ```
 
-Setup a new tigger
+Setup a new trigger
    ```bash
    cd TriggerShell
    make setup
    
-   Enter folder to watch (default: ~/Downloads): 
-   Enter folder for scripts (default: ./scripts): 
-   TriggerShell.desktop file created and permissions set in /home/chris/.config/autostart with watch_dir=/home/chris/Downloads and scripts_dir=./scripts
-   Do you want to start TriggerShell now? (y/n): n
-   TriggerShell setup complete. You can start it manually later.
+   #Enter folder to watch (default: ~/Downloads): 
+   #Enter folder for scripts (default: ./scripts): ~/scripts
+   #TriggerShell.desktop file created and permissions set in /home/chris/.config/autostart with watch_dir=/home/chris/Downloads and scripts_dir=/home/chris/scripts
+   #Do you want to start TriggerShell now? (y/n): n
+   #TriggerShell setup complete. You can start it manually later.
+
+   ```
+Long Installation: (apt based) Install required tools, Clone the repository, Navigate into the directory and build    
+Not including GO, follow here https://go.dev/doc/install
+
+   ```bash
+   apt update
+   apt install git make
+   #INSTALL GO
+   git clone https://github.com/DarkAxi0m/TriggerShell.git
+   cd TriggerShell
+   make
+
+   #Building TriggerShell ...
+   #go build -o TriggerShell 
+   #go: downloading github.com/fsnotify/fsnotify v1.7.0
+   #go: downloading golang.org/x/sys v0.4.0
+
+   sudo make install
+
+   #Installing TriggerShell  to /usr/local/bin...
+   #install -m 0755 TriggerShell  /usr/local/bin/TriggerShell
+
+   TriggerShell
+   #Usage: TriggerShell <target-directory> <script-directory>
 
    ```
 
@@ -47,7 +72,7 @@ Run TriggerShell by specifying the target directory to monitor and the directory
 ## Examples
    
    ```bash
-   ./TriggerShell ~/Downloads ./scripts`
+   ./TriggerShell ~/Downloads ./scripts
    ```
 
 For example, in a scenario where you are watching your download folder, you could use the following scripts (found in the example folder of the repo):
@@ -60,6 +85,8 @@ In no order
 
 * Watch the scripts folder for changes
 * ~~Stop the duplicate triggering with Chrome downloads~~
+* Create Releases
+* Create Deb install
 
 
 ## Contributing
