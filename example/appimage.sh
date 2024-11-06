@@ -8,7 +8,12 @@ fi
 APPIMAGE_FILE="$1"
 ORG_NAME=$(basename "$APPIMAGE_FILE" .AppImage)
 APPLICATIONS_DIR=~/Applications
-DESKTOP_FILE=~/Desktop/$ORG_NAME.desktop
+
+DESKTOP_FILE=~/Applications/$ORG_NAME.desktop
+
+DESKTOP_LNK=~/Desktop/$ORG_NAME.desktop
+START_LNK=~/.local/share/applications/$ORG_NAME.desktop
+
 DESKTOP_ICON="$(dirname "$(realpath "$0")")/../TriggerShell.png"
 
 zenity --question --text="Do you want to install the AppImage for $ORG_NAME?" --width=300
@@ -38,7 +43,15 @@ Type=Application
 Terminal=false
 EOF
 
+
+# Create symbolic links for the desktop file
+ln -s "$DESKTOP_FILE" "$DESKTOP_LNK"
+ln -s "$DESKTOP_FILE" "$START_LNK"
+
 chmod +x "$DESKTOP_FILE"
+chmod +x "$DESKTOP_LNK"
+chmod +x "$START_LNK"
 
 zenity --info --text="AppImage installed successfully!\n\nApp: $APP_NAME\nLocation: $APPLICATIONS_DIR" --width=300
 echo "AppImage moved to $APPLICATIONS_DIR and .desktop file created at $DESKTOP_FILE"
+
